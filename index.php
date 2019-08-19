@@ -7,6 +7,8 @@
 <?php
     $db_connection = pg_connect($DATABASE_URL);
     $result = pg_query($db_connection, "select * from messages");
+    print("got result")
+    print(result)
 
     if (!pg_num_rows($result)) {
         print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
