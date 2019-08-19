@@ -6,7 +6,7 @@
         <h1>Sample Heroku App</h1>
 <?php
     $db_connection = pg_connect($DATABASE_URL);
-    $result = pg_query($db_connection, "SELECT message, created_time FROM messages");
+    $result = pg_query($db_connection, "select * from messages");
 
     if (!pg_num_rows($result)) {
         print("Your connection is working, but your database is empty.\nFret not. This is expected for new apps.\n");
