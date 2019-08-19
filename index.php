@@ -5,7 +5,7 @@
     <body>
         <h1>Sample Heroku App</h1>
 <?php
-    $db_connection = pg_connect($DATABASE_URL);
+    $db_connection = pg_connect(getenv("DATABASE_URL"));
     $result = pg_query($db_connection, "select * from messages");
     print("got result");
     print($result);
